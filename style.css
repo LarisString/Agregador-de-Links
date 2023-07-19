@@ -69,7 +69,7 @@ ul li a {
 }
 
 ul li a:hover {
-    border-radius: 8px;
+    border-radius: 16px;
     border: 1.5px solid var(--text-color-dark-mode, #FFF);
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(4px);
