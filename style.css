@@ -4,16 +4,36 @@
     box-sizing: border-box;
 }
 
+:root {
+    --text-color: white;   
+    --bg-url: url(./assets/bg-mobile.jpg);
+    --profile-img-border: rgba(255, 255, 255, 0.50);
+    --stroke-color: rgba(255, 255, 255, 0.50);
+    --surface-color: rgba(255, 255, 255, 0.10);
+    --surface-color-hover: rgba(255, 255, 255, 0.05);
+    --highlight-color:  rgba(255, 255, 255, 0.20);
+}
+
+.light {
+    --text-color: black; 
+    --bg-url: url(./assets/bg-mobile-light.jpg);
+    --profile-img-border: rgba(0, 0, 0, 0.50);
+    --stroke-color: rgba(0, 0, 0, 0.50);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(0, 0, 0, 0.10);
+}
+
 
 body {  
-    background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+    background: var(--bg-url) no-repeat top center/cover;
 }
 
 
 /*body com asterisco significa que tudo que tá dentro do body vai ter a caracteristica colocada dentro do cód.*/
 body * {
     font-family: 'Inter', sans-serif;
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
 
 }
@@ -37,7 +57,7 @@ body * {
 #profile img {
     width: 112px;
     border-radius: 112px;
-    border: 2px solid var(--stroke-color-dark-mode, rgba(255, 255, 255, 0.50));
+    border: 2px solid var(--profile-img-border);
 }
 
 #proflie p {
@@ -59,16 +79,16 @@ ul li a {
     align-items: center;
     padding: 16px 24px;
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.50);
+    border: 1px solid var(--stroke-color);
     gap: 8px;
-    background: rgba(255, 255, 255, 0.10);
+    background: var(--surface-color);
     backdrop-filter: blur(4px);
 
 }
 
 ul li a:hover {
     border-radius: 8px;
-    border: 1.5px solid  #FFF;
+    border: 1.5px solid  var(--text-color);
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(4px);
     transition: 0.5s;
@@ -92,7 +112,7 @@ ul li a:hover {
 }
 
 #social-links :hover {
-    background:  rgba(255, 255, 255, 0.20);
+    background:  var(--highlight-color);
 }
 
 #footer {
